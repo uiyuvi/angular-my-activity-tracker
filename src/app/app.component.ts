@@ -10,5 +10,28 @@ export class AppComponent {
   //Define your constructor here with todos as [] ,newToDo as '' and error as false
   //Define your addMore function here
   //Define your clearAll function here
+  todos = [];
+  error = false;
+  newToDo = '';
+
+  constructor(){
+    this.todos = [];
+    this.error = false;
+    this.newToDo = '';
+  }
+
+  addMore(){
+    this.todos.push({
+      desc: this.newToDo,
+      done: false
+    })
+
+  }
+
+  clearAll(){
+    this.newToDo = '';
+    this.todos=[];
+  }
+
 }
 
